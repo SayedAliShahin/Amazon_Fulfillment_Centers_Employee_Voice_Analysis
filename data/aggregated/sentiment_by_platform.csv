@@ -1,7 +1,0 @@
-platform,sentiment,count,share_pct,n
-Glassdoor,positive,81,57.9,140
-Glassdoor,neutral,45,32.1,140
-Glassdoor,negative,14,10.0,140
-YouTube,positive,2,20.0,10
-YouTube,neutral,6,60.0,10
-YouTube,negative,2,20.0,10
