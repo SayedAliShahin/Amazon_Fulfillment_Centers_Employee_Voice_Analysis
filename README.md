@@ -4,31 +4,34 @@ What do fulfillment-center (FC) associates say about their work, and where shoul
 
 ---
 
-# 1. Background and Overview
+# Background and Overview
 
-**Context.** I did this project as a virtual externship (Extern, Amazon-themed program), working as an analyst
-for FC managers. The brief said associate turnover is about **150% a year**. That number was given to me. It is
-not calculated from the data in this project. This is an independent portfolio project, not affiliated with
-or endorsed by Amazon.
+**Company context:** Amazon fulfillment centers (FCs) receive, store, pick, pack and ship customer orders. They
+depend on a large, stable workforce of associates to keep operations running and customers served on time.
 
-**Question.** What workplace experiences influence whether FC employees stay or leave?
+**The challenge:** Associate turnover is about 150% a year. High turnover disrupts workforce stability, raises
+the cost of hiring and training replacements, and puts constant pressure on operations and customer service.
+FC managers need to know what drives people to leave and where to act first.
 
-**Method in one line.** Sentiment analysis, word-frequency analysis and theme tagging on 150 public employee
-comments, then a pilot proposal.
+**The primary question:** What workplace experiences influence whether FC employees stay or leave?
 
-Insights are grouped into four areas:
+**How I answered it:** Sentiment analysis, word-frequency analysis and theme tagging on 150 public employee
+comments, followed by a pilot proposal.
 
+**Insights are grouped into four areas:**
 - **Mood:** how positive or negative are employees overall?
 - **Ratings:** what do Glassdoor star ratings say about pay, work-life balance and leadership?
 - **Shifts and physical work:** what do people complain about most?
 - **Who is speaking:** which worker groups are in the data?
 
+This is an independent portfolio project, not affiliated with or endorsed by Amazon.
 **AI use.** AI tools helped with code and drafting. See [Assumptions and Caveats](#6-assumptions-and-caveats).
 
 ---
 
-# 2. Data Structure Overview
+# Data Structure Overview
 
+>[!CAUTION]
 > **Raw review text is not published because it is third-party content. Summary tables are in data/aggregated/. See data/README.md for details.** 
 
 | Source | Items | Used for |
@@ -41,21 +44,16 @@ Insights are grouped into four areas:
 **Main fields:** review text (summary, pros, cons, advice), star ratings (overall, pay, work-life, leadership,
 culture, career, diversity), job title, employment status.
 
-**Added by me:** `sentiment_label` (positive / neutral / negative), `Theme` (3 themes) and `Segment` (worker group).
+**Added by me:** Collected Youtube Vlogs, `sentiment_label` (positive / neutral / negative), `Theme` (3 themes) and `Segment` (worker group).
 
-**Pipeline:**
-
-```
-raw text → clean → TextBlob sentiment → word counts → theme tags → segment tags → recommendation
-```
+**Pipeline:** **`raw text → clean → TextBlob sentiment → word counts → theme tags → segment tags → recommendation`**
 
 
-Raw review text is not published (third-party content). Summary tables are in [`data/aggregated/`](data/aggregated/).
-Details are in [`data/README.md`](data/README.md).
+
 
 ---
 
-# 3. Executive Summary
+# Executive Summary
 
 ### Overview of Findings
 
@@ -72,7 +70,7 @@ and cheapest problem to test.
 
 ---
 
-# 4. Insights Deep Dive
+# Insights Deep Dive
 
 ### Mood
 
@@ -119,7 +117,7 @@ Word charts: [`figures/ngrams/`](figures/ngrams/).
 
 ---
 
-# 5. Recommendations
+# Recommendations
 
 **Pilot a Scheduling Risk dashboard for four weeks in one FC.**
 
@@ -159,7 +157,7 @@ dashboard is cheap and safe to test.
 
 ---
 
-# 6. Assumptions and Caveats
+# Assumptions and Caveats
 
 * **Small, non-random samples.** 140 reviews and 10 videos. People who post reviews may not represent all staff.
 * **Turnover is not measured.** Nothing here links comments to who actually left. The 150% figure is external.
