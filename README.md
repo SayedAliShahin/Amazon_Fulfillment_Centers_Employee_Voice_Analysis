@@ -4,27 +4,17 @@ What do fulfillment-center (FC) associates say about their work, and where shoul
 
 ---
 
-# Background and Overview
+# Business Scenario
+**Amazon fulfillment centers (FCs)** receive, store, pick, pack and ship customer orders. **They depend on a large, stable workforce of associates to keep operations running and customers served on time.** However, associate turnover is about 150% a year. **High turnover disrupts workforce stability, raises the cost of hiring and training replacements, and puts constant pressure on operations and customer service.** The primary objective of this extern project is to investigate **What workplace experiences influence whether FC employees stay or leave?**
 
-**Company context:** Amazon fulfillment centers (FCs) receive, store, pick, pack and ship customer orders. They
-depend on a large, stable workforce of associates to keep operations running and customers served on time.
 
-**The challenge:** Associate turnover is about 150% a year. High turnover disrupts workforce stability, raises
-the cost of hiring and training replacements, and puts constant pressure on operations and customer service.
-FC managers need to know what drives people to leave and where to act first.
-
-**The primary question:** What workplace experiences influence whether FC employees stay or leave?
-
-**How I answered it:** Sentiment analysis, word-frequency analysis and theme tagging on 150 public employee
-comments, followed by a pilot proposal.
-
-**Insights are grouped into four areas:**
+Sentiment analysis, word-frequency analysis and theme tagging on 150 public employee comments were used to provide:
+**grouped Insights into four areas:**
 - **Mood:** how positive or negative are employees overall?
 - **Ratings:** what do Glassdoor star ratings say about pay, work-life balance and leadership?
 - **Shifts and physical work:** what do people complain about most?
 - **Who is speaking:** which worker groups are in the data?
 
-This is an independent portfolio project, not affiliated with or endorsed by Amazon.
 **AI use.** AI tools helped with code and drafting. See [Assumptions and Caveats](#6-assumptions-and-caveats).
 
 ---
