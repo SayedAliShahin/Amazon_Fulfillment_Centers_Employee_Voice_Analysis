@@ -29,11 +29,14 @@ Insights are grouped into four areas:
 
 # 2. Data Structure Overview
 
+> **Raw review text is not published because it is third-party content. Summary tables are in data/aggregated/. See data/README.md for details.** 
+
 | Source | Items | Used for |
 |---|---|---|
 | Glassdoor reviews (Amazon FC roles) | **140** | Sentiment, themes, segments, star ratings |
 | YouTube vlog transcripts | **10** | Sentiment, themes |
 | **Total** | **150** | |
+
 
 **Main fields:** review text (summary, pros, cons, advice), star ratings (overall, pay, work-life, leadership,
 culture, career, diversity), job title, employment status.
@@ -46,13 +49,6 @@ culture, career, diversity), job title, employment status.
 raw text → clean → TextBlob sentiment → word counts → theme tags → segment tags → recommendation
 ```
 
-**Checks done**
-
-- Item counts confirmed: 140 Glassdoor + 10 YouTube = 150.
-- Sentiment recomputed from the cleaned text and matches every stored label.
-- Glassdoor stores "not rated" as **0** in sub-ratings. I excluded these. Without this, work-life would show 2.1
-  instead of 3.1.
-- `src/verify.py` runs 27 checks on the numbers in this README. All pass.
 
 Raw review text is not published (third-party content). Summary tables are in [`data/aggregated/`](data/aggregated/).
 Details are in [`data/README.md`](data/README.md).
@@ -180,6 +176,8 @@ dashboard is cheap and safe to test.
 * **Root-cause tree** ([`figures/hypothesis/`](figures/hypothesis/)) shows ideas on why long shifts exist (rate
   pressure, site design, shift policy, incentives). It is a **hypothesis from outside context, not a result of this
   data.**
+* **“Not rated” stored as 0.** Glassdoor stores missing sub-ratings as 0. I excluded them. Including them would make work-life look like 2.1 instead of 3.1.
+  
 * **AI assistance.**
 
   | Part | Tool | What I did |
