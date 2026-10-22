@@ -125,34 +125,20 @@ dashboard is cheap and safe to test.
 
 *This is a proposal. It was not run, and there are no impact results.*
 
-**Next steps for the analysis**
-
-1. Write the theme and segment rules in code so labels can be reproduced.
-2. Ask a second person to label a sample and check agreement.
-3. Test a multilingual or transformer sentiment model.
-4. Collect more videos and reviews to test the YouTube vs Glassdoor difference.
-5. Run the pilot and measure.
 
 ---
 
 # Assumptions and Caveats
-
-* **Small, non-random samples.** 140 reviews and 10 videos. People who post reviews may not represent all staff.
-* **Turnover is not measured.** Nothing here links comments to who actually left. The 150% figure is external.
-* **"Primary driver" is not proven.** Pay is mentioned most. Scheduling is chosen because it is concrete and
-  testable, not because the data proves it is the top cause.
-* **Themes are loose.** The pay theme keywords include "balance", "opportunity" and "growth", so it is broader than
-  pay. 61 of 150 items (41%) have no theme.
-* **Themes and segments were labelled by hand.** A keyword pass came first, then manual edits that were not
-  logged. The keyword code alone reproduces about 69% of the final themes. Segments came from job title and
-  employment status.
-* **Lexicon sentiment.** TextBlob can miss sarcasm and context. It reads English only: at least 4 Glassdoor
-  reviews are in Spanish (some with garbled accents), so their labels are unreliable (about 3% of reviews).
-* **YouTube comparison.** 10 videos is too few for firm conclusions.
-* **Root-cause tree** ([`figures/hypothesis/`](figures/hypothesis/)) shows ideas on why long shifts exist (rate
-  pressure, site design, shift policy, incentives). It is a **hypothesis from outside context, not a result of this
+- **Small, non-random samples.** 140 reviews and 10 videos. People who post reviews may not represent all staff.
+- **Turnover is not measured.** Nothing here links comments to who actually left. The 150% figure is external.
+- **"Primary driver" is not proven.** Pay is mentioned most. Scheduling is chosen because it is concrete and testable, not because the data proves it is the top cause.
+- **Themes are loose.** The pay theme keywords include "balance", "opportunity" and "growth", so it is broader than pay. 61 of 150 items (41%) have no theme.
+- **Themes and segments were labelled by hand.** A keyword pass came first, then manual edits that were not logged. The keyword code alone reproduces about 69% of the final themes. Segments came from job title and employment status.
+- **Lexicon sentiment.** TextBlob can miss sarcasm and context. It reads English only: at least 4 Glassdoor reviews are in Spanish (some with garbled accents), so their labels are unreliable (about 3% of reviews).
+- **YouTube comparison.** 10 videos is too few for firm conclusions.
+- **Root-cause tree** ([`figures/hypothesis/`](figures/hypothesis/)) shows ideas on why long shifts exist (rate pressure, site design, shift policy, incentives). It is a **hypothesis from outside context, not a result of this
   data.**
-* **“Not rated” stored as 0.** Glassdoor stores missing sub-ratings as 0. I excluded them. Including them would make work-life look like 2.1 instead of 3.1.
+- **“Not rated” stored as 0.** Glassdoor stores missing sub-ratings as 0. I excluded them. Including them would make work-life look like 2.1 instead of 3.1.
   
 * **AI assistance.**
 
