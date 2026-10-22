@@ -34,7 +34,7 @@ Sentiment analysis, word-frequency analysis and theme tagging on 150 public empl
 **Main fields:** review text (summary, pros, cons, advice), star ratings (overall, pay, work-life, leadership,
 culture, career, diversity), job title, employment status.
 
-**Added by me:** Collected Youtube Vlogs, `sentiment_label` (positive / neutral / negative), `Theme` (3 themes) and `Segment` (worker group).
+**Added:** Collected Youtube Vlogs, `sentiment_label` (positive / neutral / negative), `Theme` (3 themes) and `Segment` (worker group).
 
 **Pipeline:** **`raw text → clean → TextBlob sentiment → word counts → theme tags → segment tags → recommendation`**
 
