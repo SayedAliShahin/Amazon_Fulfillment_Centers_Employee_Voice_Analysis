@@ -132,8 +132,8 @@ dashboard is cheap and safe to test.
 - **Small, non-random samples.** 140 reviews and 10 videos. People who post reviews may not represent all staff.
 - **Turnover is not measured.** Nothing here links comments to who actually left. The 150% figure is external.
 - **"Primary driver" is not proven.** Pay is mentioned most. Scheduling is chosen because it is concrete and testable, not because the data proves it is the top cause.
-- **Lexicon sentiment.** TextBlob can miss sarcasm and context. It reads English only: at least 4 Glassdoor reviews are in Spanish (some with garbled accents), so their labels are unreliable (about 3% of reviews).
-- **YouTube comparison.** 10 videos is too few for firm conclusions.
+- **Lexicon sentiment.** TextBlob reads English only: at least 4 Glassdoor reviews are in Spanish (some with garbled accents), so their labels are unreliable (about 3% of reviews).
+- **YouTube comparison.** 10 videos is too few for business conclusions.
 - **“Not rated” stored as 0.** Glassdoor stores missing sub-ratings as 0 and excluded.
 * **AI assistance.**
 
@@ -146,22 +146,5 @@ dashboard is cheap and safe to test.
   | Interpretation and recommendation | Me | I can explain every method and number here. |
 
 ---
-
-### Project files
-
-```
-src/analysis.py          builds the charts and summary tables
-src/verify.py            checks the numbers in this README against the data (27 checks)
-figures/                 charts (ngrams/ and hypothesis/ subfolders)
-data/aggregated/         summary tables behind the charts
-notebooks/original/      original Colab notebooks (archived, with known issues listed)
-```
-
-To reproduce: `pip install -r requirements.txt`, then
-
-```
-python src/analysis.py  your_labelled_file.csv
-python src/verify.py    your_labelled_file.csv  your_raw_glassdoor_file.csv
-```
 
 **Author:** Sayed Ali Shahin
