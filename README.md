@@ -137,14 +137,6 @@ dashboard is cheap and safe to test.
 - **“Not rated” stored as 0.** Glassdoor stores missing sub-ratings as 0 and excluded.
 * **AI assistance.** AI was used in this project for mainly brainstorming, generating codes, thematic analysis and visualizations 
 
-  | Part | Tool | What I did |
-  |---|---|---|
-  | Research questions | ChatGPT | Drafted five questions. I merged them with mine into one guiding question. |
-  | Original notebook code | AI assistants, mainly ChatGPT | Most code was AI-generated. I ran it on my data, set the thresholds and assembled the pipeline. |
-  | Themes and segments | Manual, with a keyword first pass | Edits not logged. |
-  | Drafted from my notebooks, data and notes. Also audited the notebooks. |
-  | Interpretation and recommendation | Me | I can explain every method and number here. |
-
 ---
 
 **Author:** Sayed Ali Shahin
